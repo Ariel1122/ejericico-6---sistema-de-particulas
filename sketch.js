@@ -185,3 +185,79 @@ function draw() {
 //     ellipse(this.x, this.y, this.size, this.size);
 //   }
 // }
+
+// atardecer
+// function setup() {
+//   createCanvas(400, 400);
+// }
+
+// function draw() {
+//   background(255);
+
+//   // Definir dos colores cálidos para el atardecer
+//   let sunsetColor1 = color(255, 165, 0); // Amarillo difuminado con rojo
+//   let sunsetColor2 = color(255, 87, 34); // Naranja difuminado con rojo oscuro
+
+//   // Dibujar un degradado horizontal simulando un atardecer
+//   for (let i = 0; i < width; i++) {
+//     // Calcular el porcentaje de posición a través del ancho del lienzo
+//     let inter = map(i, 0, width, 0, 1);
+
+//     // Usar lerpColor para interpolar entre los dos colores cálidos
+//     let c = lerpColor(sunsetColor1, sunsetColor2, inter);
+
+//     // Configurar el color de la línea
+//     stroke(c);
+//     line(i, 0, i, height);
+//   }
+// }
+
+// estrellas
+// let particles = [];
+
+// function setup() {
+//   createCanvas(400, 400);
+//   for (let i = 0; i < 100; i++) {
+//     particles.push(new Particle());
+//   }
+// }
+
+// function draw() {
+//   background(0);
+
+//   for (let particle of particles) {
+//     particle.update();
+//     particle.show();
+//   }
+// }
+
+// class Particle {
+//   constructor() {
+//     this.x = random(width);
+//     this.y = random(height);
+//     this.size = random(1, 4);
+//     this.alpha = random(50, 255); // Transparencia inicial
+//     this.alphaChange = random(0.5, 2); // Cambio de transparencia más lento
+//     this.speed = random(0.1, 1); // Movimiento más lento
+//   }
+
+//   update() {
+//     // Cambia la posición de la partícula
+//     this.x += this.speed;
+//     this.y += this.speed;
+
+//     // Reinicia la posición al llegar al borde sin cambiar la transparencia
+//     if (this.x > width) {
+//       this.x = 0;
+//     }
+//     if (this.y > height) {
+//       this.y = 0;
+//     }
+//   }
+
+//   show() {
+//     noStroke();
+//     fill(255, this.alpha);
+//     ellipse(this.x, this.y, this.size, this.size);
+//   }
+// }
